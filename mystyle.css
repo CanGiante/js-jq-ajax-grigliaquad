@@ -1,0 +1,18 @@
+.wrapper {
+  display:flex;
+  flex-wrap: wrap;
+  border: 2px solid blue;
+  width: 624px;
+  height: 624px;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  border: 2px solid blue;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
