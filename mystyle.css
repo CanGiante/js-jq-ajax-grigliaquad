@@ -3,25 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: rgb(69, 190, 167);
+}
 .wrapper {
   display:flex;
   flex-wrap: wrap;
   width: 624px;
   height: 624px;
   background-color: rgb(69, 190, 167);
-  border: 2px solid rgb(69, 190, 167);
+  border: 6.9px solid rgb(69, 190, 167);
   color: rgb(69, 190, 167);
-  margin-top: 1%;
 }
 .square {
-	width: 100px;
+	flex-basis: 100px;
 	height: 100px;
-  border: 2px solid rgb(69, 190, 167);
   background-color: rgb(193, 116, 142);
+  border: 2px solid rgb(69, 190, 167);
 	text-align: center;
 	line-height: 100px;
 	font-size: 5em;
 	font-family: sans-serif;
+  cursor: pointer;
 }
 .yellow {
   background-color: yellow;

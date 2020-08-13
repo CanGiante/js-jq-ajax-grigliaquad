@@ -6,18 +6,17 @@ $(document).ready(function() {
 
   //genero una griglia di quadrati
   var numeroQuadrati = 36;
-
   for (var i = 0; i < numeroQuadrati; i++) {
     $(".wrapper").append("<div class='square'></div>");
   }
 
-  //cliccando su un quadrato parte una richiesta ajax
+  //cliccando su un quadrato parte una richiesta AJAX
 	$('.square').click(function() {
       //specifico il contesto di this
   		var cliccato = this;
 
   		$.ajax({
-        //chiedo un numero random all'API apposita
+        //chiede un numero random ad un' apposita API
   			url: 'https://flynn.boolean.careers/exercises/api/random/int',
   			method: 'GET',
   			success: function(dati)
@@ -27,11 +26,9 @@ $(document).ready(function() {
   					$(cliccato).text(numeroCasuale);
 
             if(numeroCasuale <= 5) {
-              $(cliccato).addClass('yellow');
-              $(cliccato).removeClass('green');
+              $(cliccato).addClass('yellow').removeClass('green');
             } else {
-              $(cliccato).addClass('green');
-              $(cliccato).removeClass('yellow');
+              $(cliccato).addClass('green').removeClass('yellow');
             }
     			},
 
@@ -45,11 +42,11 @@ $(document).ready(function() {
 
 	});
 
-  // $('.wrapper').mouseleave(function() {
-  //
-  //   $(".square").empty();
-  //
-  // });
+  $('.wrapper').mouseleave(function() {
+
+    $(".square").empty().removeClass('yellow').removeClass('green');
+
+  });
 
 
 });///end//ready/
